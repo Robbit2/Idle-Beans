@@ -18,7 +18,7 @@ var game = {
             name: "Bean Field"
         }
     },
-    acheives: [{ req: "clickedAway", gotten: false, text: "You found the secret acheivement!" }, { req: "game.beans>0", gotten: false, text: "You have one BEAN" }, { req: "game.beans>9", gotten: false, text: "You have ten BEANS" }, { req: "game.beans>68", gotten: false, text: "You have some nice BEANS" }]
+    acheives: [{ req: "game.beans>0", gotten: false, text: "You have one BEAN" }, { req: "game.beans>9", gotten: false, text: "You have ten BEANS" }, { req: "game.beans>68", gotten: false, text: "You have some nice BEANS" }]
 };
 
 var delay = 0;
