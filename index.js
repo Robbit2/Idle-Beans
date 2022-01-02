@@ -103,3 +103,5 @@ function thingClicked(thing) {
         updateUpgrades();
     }
 }
+
+console.log("%cAre you trying to CHEAT?!", "color:red;font-size:36px;");
