@@ -1,0 +1,31 @@
+@font-face {
+    font-family: "Happy Chicken";
+    src: url("fonts/HappyChicken.ttf");
+}
+
+@font-face {
+    font-family: "Varsity";
+    src: url("fonts/VarsityTeam-Bold.otf");
+}
+
+body {
+    color:black;
+    font-family: "Happy Chicken";
+}
+
+h1 {
+    font-family: "Happy Chicken";
+    -webkit-text-stroke: 1px black;
+    color:white;
+}
+
+#away {
+    font-family:"Varsity";
+}
+
+#acheives {
+    width:400px;
+    height:300px;
+    overflow:scroll;
+    font-family: "Varsity";
+}
