@@ -16,6 +16,46 @@ var game = {
             hasun: false,
             unlocked: 75,
             name: "Bean Field"
+        },
+        beanAcademy: {
+            amount: 0,
+            cost: 1500,
+            bps: 5,
+            hasun: false,
+            unlocked: 1250,
+            name: "Bean Academy"
+        },
+        beanFactory: {
+            amount: 0,
+            cost: 170000,
+            bps: 30,
+            hasun: false,
+            unlocked: 150000,
+            name: "Bean Factory"
+        },
+        beanReserve: {
+            amount: 0,
+            cost: 5000000,
+            bps: 160,
+            hasun: false,
+            unlocked: 4500000,
+            name: "Bean Reserve"
+        },
+        beanTemple: {
+            amount: 0,
+            cost: 300000000,
+            bps: 2400,
+            hasun: false,
+            unlocked: 25000000,
+            name: "Bean Temple"
+        },
+        beanGovernment: {
+            amount: 0,
+            cost: 1400000000,
+            bps: 13000,
+            hasun: false,
+            unlocked: 13000,
+            name: "Bean Goverment"
         }
     },
     acheives: [{ req: "game.beans>0", gotten: false, text: "You have one BEAN" }, { req: "game.beans>9", gotten: false, text: "You have ten BEANS" }, { req: "game.beans>68", gotten: false, text: "You have some nice BEANS" }]
