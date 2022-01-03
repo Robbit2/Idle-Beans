@@ -1,5 +1,6 @@
 var game = {
     beans: 0,
+    faction: null,
     upgrades: {
         beanMachine: {
             amount: 0,
@@ -58,7 +59,7 @@ var game = {
             name: "Bean Goverment"
         }
     },
-    acheives: [{ req: "game.beans>0", gotten: false, text: "You have one BEAN" }, { req: "game.beans>9", gotten: false, text: "You have ten BEANS" }, { req: "game.beans>68", gotten: false, text: "You have some nice BEANS" }]
+    acheives: [{ req: "game.beans>0", gotten: false, text: "You have one BEAN" }, { req: "game.beans>9", gotten: false, text: "You have ten BEANS" }, { req: "game.beans>68", gotten: false, text: "You have some nice BEANS" }, { req: "game.beans>9999999999", gotten: false, text: "1%- of what?" }, { req: "game.beans>49999999999", gotten: false, text: "5% of something" }, { req: "game.beans>99999999999", gotten: false, text: "10%..." }, { req: "game.beans>499999999999", gotten: false, text: "50%, something's talking to me..." }, { req: "game.beans>999999999999", gotten: false, text: "The BEANPOCALYPSE - coming soon lol" }]
 };
 
 var delay = 0;
