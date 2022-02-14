@@ -65,11 +65,6 @@ var game = {
 var delay = 0;
 var bps = 0;
 
-function secretAcheivement(){
-    game.acheives[0].gotten = true;
-    document.querySelector("#acheives").innerHTML += `<br>Acheivement Unlocked<br>${game.acheives[0].text}<br>`;
-}
-
 function updateUpgrades() {
     var _d = 0;
     document.querySelector("#upgrades").innerHTML = "";
