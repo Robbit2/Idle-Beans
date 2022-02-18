@@ -55,7 +55,7 @@ var game = {
             cost: 1400000000,
             bps: 13000,
             hasun: false,
-            unlocked: 13000,
+            unlocked: 1300000000,
             name: "Bean Goverment"
         }
     },
@@ -70,7 +70,7 @@ function updateUpgrades() {
     document.querySelector("#upgrades").innerHTML = "";
     for (_ in game.upgrades) {
         if (game.upgrades[_].hasun) {
-            document.querySelector("#upgrades").innerHTML += `<br> <button onclick="thingClicked('${_}')">${game.upgrades[_].name}</button> you have ${numberformat.format(game.upgrades[_].amount)}. Cost: ${numberformat.format(game.upgrades[_].cost)}`;
+            document.querySelector("#upgrades").innerHTML += `<br> <button class="buy-btn" onclick="thingClicked('${_}')">${game.upgrades[_].name}</button> you have ${numberformat.format(game.upgrades[_].amount)}. Cost: ${numberformat.format(game.upgrades[_].cost)}`;
             _d += game.upgrades[_].bps * game.upgrades[_].amount;
             bps = _d;
         }

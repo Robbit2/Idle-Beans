@@ -1,31 +1,84 @@
 @font-face {
-    font-family: "Happy Chicken";
+    font-family: 'Merriweather Sans', sans-serif;
     src: url("fonts/HappyChicken.ttf");
 }
 
 @font-face {
-    font-family: "Varsity";
+    font-family: 'Merriweather Sans', sans-serif;
     src: url("fonts/VarsityTeam-Bold.otf");
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&display=swap');
+
 body {
     color:black;
-    font-family: "Happy Chicken";
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.left, .right, .middle {
+    width:33%;
+}
+
+.left, .middle {
+    float:left;
+    top:0;
+}
+
+.middle {
+    text-align:middle;
+}
+
+.right{
+    float:right;
+    top:0;
 }
 
 h1 {
-    font-family: "Happy Chicken";
+    font-family: 'Merriweather Sans', sans-serif;
     -webkit-text-stroke: 1px black;
     color:white;
 }
 
 #away {
-    font-family:"Varsity";
+    font-family: 'Merriweather Sans', sans-serif;
 }
 
 #acheives {
     width:400px;
     height:300px;
     overflow:scroll;
-    font-family: "Varsity";
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+.BEAN {
+    height:128px;
+    width:128px;
+    transition:ease .5s;
+    margin:auto;
+    z-index:2;
+    position:relative;
+    display:block;
+}
+
+.BEAN:hover {
+    width:164px;
+    height:164px;
+}
+
+.BEAN:target{
+    width:100px;
+    height:100px;
+}
+
+.buy-btn {
+    background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
 }

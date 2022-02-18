@@ -22,16 +22,21 @@ No, you'd never... Right?
         <link rel="manifest" href="images/site.webmanifest">
     </head>
     <body onload="updateCount()">
-        <h1 id="beans">You have 0 Beans</h1>
-        <button onclick="game.beans++">Get a bean</button>
-        <div id="upgrades">
-
-        </div>
-        <br>
         <b id="away"></b>
         <br>
-        <div id="acheives">
+        <div class="left">
+            <div id="acheives">
 
+            </div>
+        </div>
+        <div class="middle">
+            <h1 id="beans" style="text-align:center;">You have 0 Beans</h1>
+            <img src="/images/bean.png" onclick="game.beans++;" class="BEAN">
+        </div>
+        <div class="right">
+            <div id="upgrades">
+
+            </div>
         </div>
     </body>
 </html>
