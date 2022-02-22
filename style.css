@@ -50,10 +50,46 @@ h1 {
     font-family: 'Merriweather Sans', sans-serif;
 }
 
+@keyframes wiggle {
+  0% {
+    transform: scale(1);
+  }
+  6.25% {
+    transform: scale(0.75);
+  }
+  8.75% {
+    transform: scale(0.7);
+  }
+  25% {
+    transform: scale(1);
+  }
+  32.5% {
+    transform: scale(0.95);
+  }
+  42.5% {
+    transform: scale(1.0);
+  }
+  52% {
+    transform: scale(0.97);
+  }
+  62% {
+    transform: scale(1);
+  }
+  72% {
+    transform: scale(0.98);
+  }
+  82% {
+    transform: scale(1);
+  }
+  93% {
+    transform: scale(0.99);
+  }
+}
+
 .BEAN {
     height:128px;
     width:128px;
-    transition:ease .5s;
+    transition: .15s;
     margin:auto;
     z-index:2;
     position:relative;
@@ -61,13 +97,11 @@ h1 {
 }
 
 .BEAN:hover {
-    width:164px;
-    height:164px;
+    animation:wiggle 2s;
 }
 
-.BEAN:target{
-    width:100px;
-    height:100px;
+.BEAN:active{
+    transform:scale(0.8);
 }
 
 .buy-btn {
