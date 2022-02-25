@@ -13,9 +13,10 @@ No, you'd never... Right?
     <head>
         <title>Idle Beans</title>
         <link rel="stylesheet" href="style.css">
-        <script src="index.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js"></script>
+        <script src="index.js" rel="preload"></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js" rel="preload"></script>
         <script src="https://cdn.jsdelivr.net/gh/erosson/swarm-numberformat@v0.1.0/dist/swarm-numberformat.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/keymaster/1.6.1/keymaster.js" rel="preload"></script>
         <script src="https://rawgit.com/cmawhorter/keymaster-sequences.js/master/dist/keymaster-sequences.js" rel="preload"></script>
         <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
@@ -32,12 +33,21 @@ No, you'd never... Right?
         </div>
         <div class="middle">
             <h1 id="beans" style="text-align:center;">You have 0 Beans</h1>
-            <img src="/images/bean.png" onclick="game.beans++;" class="BEAN">
+            <h3 id="bps" style="text-align:center;"></h3>
+            <img src="/images/bean-can.png" onclick="game.beans+=game.clickpower;game.clicks++;click.play();" class="BEAN">
         </div>
         <div class="right">
             <div id="upgrades">
 
             </div>
         </div>
+        <img src="images/red-bean.png" id="popupbean">
+        <audio src="/powerUp.wav" class="invisaudio" id="beanclick"></audio>
+        <audio src="/click.wav" class="invisaudio" id="clicksfx"></audio>
     </body>
+    <script>
+        key.sequence('b e a n e r', function () {
+            beaner();
+        });
+    </script>
 </html>
