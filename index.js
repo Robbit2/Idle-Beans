@@ -67,8 +67,18 @@ var game = {
 
 var delay = 0;
 var bps = 0;
-var beanclick = document.querySelector("#beanclick");
-var click = document.querySelector("#clicksfx");
+var sfx_click = new Audio("/audio/click.wav");
+sfx_click.volume = .5;
+sfx_click.defaultPlaybackRate = 0.5;
+var sfx_beanClick = new Audio("/audio/powerUp.wav");
+sfx_beanClick.volume = .5;
+sfx_beanClick.defaultPlaybackRate = 0.5;
+var sfx_error = new Audio("/audio/error.wav");
+sfx_error.volume = .5;
+sfx_error.defaultPlaybackRate = 0.5;
+var sfx_acheiveGet = new Audio("/audio/acheiveGet.wav");
+sfx_acheiveGet.volume = .5;
+sfx_acheiveGet.defaultPlaybackRate = 0.5;
 
 function beaner() {
     document.querySelector(".BEAN").src = "/images/beaner.png";
@@ -91,7 +101,7 @@ function beanClick(){
         var choice = Math.ceil(Math.random()*10)/2;
         console.log(choice);
         document.querySelector("#popupbean").style.display = "none";
-        beanclick.play();
+        sfx_beanClick.play();
         if(choice <= 1){
             game.beans += Math.round(Math.random()*100);
         }else if(choice <= 2 && choice > 1){
@@ -133,7 +143,7 @@ function summonBean() {
     setTimeout(() => {
         bean.style.display = "none";
         setTimeout(summonBean,5000)
-    },5000)
+    },420000)
 }
             
 function updateCount() {
@@ -171,6 +181,11 @@ function updateCount() {
             if (_b() & !game.acheives[_].gotten) {
                 game.acheives[_].gotten = true;
                 document.querySelector("#acheives").innerHTML += `<br><div class='acheivement'>Acheivement Unlocked<br>${game.acheives[_].text}</div><br>`;
+                sfx_acheiveGet.play();
+                if (window.Notification && Notification.permission === "granted") {
+                    var img = "/images/idle_beans_icon.png";
+                    var notification = new Notification("Acheivement Unlocked!", {body: game.acheives[_].text, icon: img});
+                }
             }
         }
         document.querySelector("#beans").innerHTML = `You have ${numberformat.format(Number(String(game.beans).split(".")[0]))} Beans`;
@@ -190,7 +205,7 @@ function updateCount() {
     }, 50)
     setTimeout(() => {
         summonBean();
-    },5000)
+    },420000)
 }
 
 function thingClicked(thing) {
@@ -199,8 +214,11 @@ function thingClicked(thing) {
         game.upgrades[thing].amount++;
         game.upgrades[thing].cost += Math.round(game.upgrades[thing].cost * 0.15)
         updateUpgrades();
+        sfx_click.play();
+    } else {
+        sfx_error.play();
     }
-    click.play();
+    
 }
 
 console.log("%cAre you trying to CHEAT?!", "color:red;font-size:36px;");

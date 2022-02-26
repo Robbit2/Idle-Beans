@@ -18,10 +18,28 @@ No, you'd never... Right?
         <script src="https://cdn.jsdelivr.net/gh/erosson/swarm-numberformat@v0.1.0/dist/swarm-numberformat.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/keymaster/1.6.1/keymaster.js" rel="preload"></script>
         <script src="https://rawgit.com/cmawhorter/keymaster-sequences.js/master/dist/keymaster-sequences.js" rel="preload"></script>
-        <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="images/idle_beans_icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="images/idle_beans_icon.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="images/idle_beans_icon.png">
         <link rel="manifest" href="images/site.webmanifest">
+        <!-- Primary Meta Tags -->
+        <title>Idle Beans</title>
+        <meta name="title" content="Idle Beans">
+        <meta name="description" content="Idle Beans is a top quality clicker game, when you slowly create beans from thin air, then expand to conquering worlds, and  traveling through the multiverse, creating beans along the way.">
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://idle-beans.josephheinz.repl.co/">
+        <meta property="og:title" content="Idle Beans">
+        <meta property="og:description" content="Idle Beans is a top quality clicker game, when you slowly create beans from thin air, then expand to conquering worlds, and  traveling through the multiverse, creating beans along the way.">
+        <meta property="og:image" content="https://idle-beans.josephheinz.repl.co/images/idle_beans_icon.png">
+        
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://idle-beans.josephheinz.repl.co/">
+        <meta property="twitter:title" content="Idle Beans">
+        <meta property="twitter:description" content="Idle Beans is a top quality clicker game, when you slowly create beans from thin air, then expand to conquering worlds, and  traveling through the multiverse, creating beans along the way.">
+        <meta property="twitter:image" content="https://idle-beans.josephheinz.repl.co/images/idle_beans_icon.png">
     </head>
     <body onload="updateCount()">
         <b id="away"></b>
@@ -34,7 +52,7 @@ No, you'd never... Right?
         <div class="middle">
             <h1 id="beans" style="text-align:center;">You have 0 Beans</h1>
             <h3 id="bps" style="text-align:center;"></h3>
-            <img src="/images/bean-can.png" onclick="game.beans+=game.clickpower;game.clicks++;click.play();" class="BEAN">
+            <img src="/images/bean-can.png" onclick="game.beans+=game.clickpower;game.clicks++;sfx_click.play();" class="BEAN">
         </div>
         <div class="right">
             <div id="upgrades">
@@ -42,8 +60,6 @@ No, you'd never... Right?
             </div>
         </div>
         <img src="images/red-bean.png" id="popupbean">
-        <audio src="/powerUp.wav" class="invisaudio" id="beanclick"></audio>
-        <audio src="/click.wav" class="invisaudio" id="clicksfx"></audio>
     </body>
     <script>
         key.sequence('b e a n e r', function () {
