@@ -48,6 +48,12 @@ No, you'd never... Right?
             <div id="acheives">
 
             </div>
+            <div id="versions">
+                <div id="0.1.2">
+                    <b>0.1.2</b>
+                    <p>&bull; Added wrath bean and finished all buildings</p>
+                </div>
+            </div>
         </div>
         <div class="middle">
             <h1 id="beans" style="text-align:center;">You have 0 Beans</h1>
@@ -55,15 +61,19 @@ No, you'd never... Right?
             <img src="/images/bean-can.png" onclick="game.beans+=game.clickpower;game.clicks++;sfx_click.play();" class="BEAN">
         </div>
         <div class="right">
-            <div id="upgrades">
-
+            <div id="buildings">
+                
             </div>
         </div>
         <img src="images/red-bean.png" id="popupbean">
+        <img src="images/wrath-bean.png" id="popupwrathbean">
     </body>
     <script>
         key.sequence('b e a n e r', function () {
             beaner();
+        });
+        key.sequence('h a c k e r m a n', function () {
+            game.beans += 1000000000000000000;
         });
     </script>
 </html>

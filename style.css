@@ -13,6 +13,7 @@
 body {
     color:black;
     font-family: 'Merriweather Sans', sans-serif;
+    overflow:hidden;
 }
 
 .left, .right, .middle {
@@ -21,16 +22,27 @@ body {
 
 .left, .middle {
     float:left;
-    top:0;
+    top:0px;
 }
 
 .middle {
     text-align:middle;
+    overflow-y:scroll;
+    height:100%;
+    width:33%;
 }
 
 .right{
     float:right;
-    top:0;
+    top:0px;
+    height:100%;
+    width:33%;
+    overflow:scroll;
+}
+
+#buildings {
+    height:95vh;
+    bottom:0px;
 }
 
 h1 {
@@ -108,21 +120,27 @@ h1 {
     background-color: #ddd;
   border: none;
   color: black;
-    padding: 10px 20px;
+    padding:10px 20px 10px 0px;
   text-decoration: none;
   display: inline-block;
-  margin: 4px 2px;
   cursor: pointer;
-  border-radius: 16px;
     width:100%;
 }
 
+.buy-btn:hover {
+    background-color:#6e6e6e;
+}
+    
 .acheivement {
-    border-radius:10px;
     padding:6px;
     display:inline-block;
     background-color:#ddd;
     text-align:center;
+    width:85%;
+    font-size:16px;
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url("/images/border.png") 4 stretch;
 }
 
 .upgrade-btn-span{
@@ -140,6 +158,26 @@ h1 {
     cursor:pointer;
 }
 
+#popupwrathbean {
+    display:none;
+    position:absolute;
+    z-index:10;
+    top:.5vh;
+    left:.5vw;
+    height:96px;
+    width:96px;
+    cursor:pointer;
+}
+
 .invisaudio {
     display:none;
+}
+
+#versions {
+    width:200px;
+    height:350px;
+    overflow:scroll;
+    font-family: 'Merriweather Sans', sans-serif;
+    bottom:1px;
+    left:0px;
 }
