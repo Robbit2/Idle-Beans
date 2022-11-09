@@ -216,7 +216,7 @@ function reset(){
         for(_ in game.acheives){
             game.acheives[_].gotten = false;
         }
-        Cookies.remove("game");
+        localStorage.remove("game");
     }
 }
 
@@ -225,7 +225,7 @@ function updateUpgrades() {
     document.querySelector("#buildings").innerHTML = "";
     for (_ in game.upgrades) {
         if (game.upgrades[_].hasun) {
-            document.querySelector("#buildings").innerHTML += `<br> <button class="buy-btn" onclick="thingClicked('${_}')"><img src="${game.upgrades[_].img}" alt="${game.upgrades[_].img}" height="64px" width="64px" style="float:left;margin:2px;"><span style="text-align:left;float:left;font-size:16px;">${game.upgrades[_].name}<br>${numberformat.format(game.upgrades[_].cost)} beans<br>${game.upgrades[_].flavor}</span><span style="float:right;font-size:32px;">${numberformat.format(game.upgrades[_].amount)}</span></button>`;
+            document.querySelector("#buildings").innerHTML += `<br> <button onclick="thingClicked('${_}')"><img src="${game.upgrades[_].img}" alt="${game.upgrades[_].img}" height="64px" width="64px" style="float:left;margin:2px;"><span style="text-align:left;float:left;font-size:14px;">${game.upgrades[_].name}<br>${numberformat.format(game.upgrades[_].cost)} beans<br>${game.upgrades[_].flavor}</span><span style="float:right;font-size:24px;">${numberformat.format(game.upgrades[_].amount)}</span></button>`;
             _d += game.upgrades[_].bps * game.upgrades[_].amount;
             bps = _d;
         }
@@ -342,8 +342,8 @@ function summonWrath() {
 }
             
 function updateCount() {
-    if (Cookies.get("game") != null && Cookies.get("game") != "undefined") {
-        var game1 = JSON.parse(Cookies.get("game"));
+    if (localStorage.game != null && localStorage.game != "undefined") {
+        var game1 = JSON.parse(localStorage.game);
         for (_ in game.upgrades) {
             if (game1.upgrades[_] == null) {
                 game1.upgrades[_] = game.upgrades[_];
@@ -358,8 +358,8 @@ function updateCount() {
         }
     }
     updateUpgrades();
-    if (Cookies.get("lasttime") != null) {
-        var lastSaveDate = Number(Cookies.get("lasttime"))
+    if (localStorage.lasttime != null) {
+        var lastSaveDate = Number(localStorage.lasttime)
         lastSaveDate = Date.now() - lastSaveDate;
         lastSaveDate = Math.round(lastSaveDate / 1000);
         if (lastSaveDate / 60 >= 1) {
@@ -392,8 +392,8 @@ function updateCount() {
         }
         delay++;
         if (delay >= 40) {
-            Cookies.set("game", JSON.stringify(game), { expires: 100000 });
-            Cookies.set("lasttime", Date.now(), { expires: 100000 })
+            localStorage.game = JSON.stringify(game);
+            localStorage.lasttime = Date.now();
             delay = 0;
         }
 

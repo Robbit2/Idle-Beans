@@ -116,21 +116,40 @@ h1 {
     transform:scale(0.8);
 }
 
-.buy-btn {
-    background-color: #ddd;
-  border: none;
-  color: black;
-    padding:10px 20px 10px 0px;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-    width:100%;
+button {
+    font-size: 16px;
+	line-height: 24px;
+	color: var(#000);
+	padding: 8px 32px;
+	border-radius: 2px;
+	outline: 2px solid var(#000);
+	cursor: pointer;
+	transition: transform 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.5), box-shadow 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.5);
+	width: 90%;
+	background: var(#fff);
+	margin: 8px 0 8px 0;
+	border: 2px solid black;
 }
 
-.buy-btn:hover {
-    background-color:#6e6e6e;
+button:hover {
+    transform: translateX(5px) translateY(-5px);
+	box-shadow: -5px 5px 0 0 var(#D8D8D8), -5px 5px 0 2px var(#000);
 }
-    
+
+button:active {
+	transform: translateX(2px) translateY(-2px);
+	box-shadow: -3px 3px 0 0 var(--gray), -3px 3px 0 2px var(--black);
+}
+
+button:disabled, button:disabled:hover, button.disabled:focus-visible {
+	transform: none;
+	box-shadow: none;
+	cursor: not-allowed;
+	color: var(#D8D8D8);
+	background: var(#fff);
+	outline: 2px solid var(#D8D8D8);
+}
+
 .acheivement {
     padding:6px;
     display:inline-block;

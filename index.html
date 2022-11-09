@@ -13,11 +13,11 @@ No, you'd never... Right?
     <head>
         <title>Idle Beans</title>
         <link rel="stylesheet" href="style.css">
-        <script src="index.js" rel="preload"></script>
-        <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js" rel="preload"></script>
+        <script src="index.js" rel="preload" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/js-cookie@beta/dist/js.cookie.min.js" rel="preload" defer></script>
         <script src="https://cdn.jsdelivr.net/gh/erosson/swarm-numberformat@v0.1.0/dist/swarm-numberformat.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/keymaster/1.6.1/keymaster.js" rel="preload"></script>
-        <script src="https://rawgit.com/cmawhorter/keymaster-sequences.js/master/dist/keymaster-sequences.js" rel="preload"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/keymaster/1.6.1/keymaster.js" rel="preload" defer></script>
+        <script src="https://rawgit.com/cmawhorter/keymaster-sequences.js/master/dist/keymaster-sequences.js" rel="preload" defer></script>
         <link rel="apple-touch-icon" sizes="180x180" href="images/idle_beans_icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="images/idle_beans_icon.png">
         <link rel="icon" type="image/png" sizes="16x16" href="images/idle_beans_icon.png">
@@ -40,6 +40,7 @@ No, you'd never... Right?
         <meta property="twitter:title" content="Idle Beans">
         <meta property="twitter:description" content="Idle Beans is a top quality clicker game, when you slowly create beans from thin air, then expand to conquering worlds, and  traveling through the multiverse, creating beans along the way.">
         <meta property="twitter:image" content="https://idle-beans.josephheinz.repl.co/images/idle_beans_icon.png">
+        <!--<link href="https://bouncecss.bookie0.repl.co/bounce.css" rel="stylesheet">-->
     </head>
     <body onload="updateCount()">
         <b id="away"></b>
@@ -48,11 +49,11 @@ No, you'd never... Right?
             <div id="acheives">
 
             </div>
-            <div id="versions">
+            <!--<div id="versions">
                 <div id="0.1.2">
                     <b>0.1.2</b>
                     <p>&bull; Added wrath bean and finished all buildings</p>
-                </div>
+                </div>-->
             </div>
         </div>
         <div class="middle">
@@ -68,7 +69,7 @@ No, you'd never... Right?
         <img src="images/red-bean.png" id="popupbean">
         <img src="images/wrath-bean.png" id="popupwrathbean">
     </body>
-    <script>
+    <script defer>
         key.sequence('b e a n e r', function () {
             beaner();
         });
