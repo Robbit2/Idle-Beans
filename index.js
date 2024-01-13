@@ -18,7 +18,7 @@ var game = {
             unlocked: 1,
             name: "Can o' beans",
             flavor: "A can to keep your beans in- YUM!",
-            img: "/images/bean-can.png"
+            img: "images/bean-can.png"
         },
         beanMachine: {
             amount: 0,
@@ -28,7 +28,7 @@ var game = {
             unlocked: 75,
             name: "Machine",
             flavor: "A machine that packages up beans",
-            img: "/images/buildings/bean-machine.png"
+            img: "images/buildings/bean-machine.png"
         },
         beanFarm: {
             amount: 0,
@@ -38,7 +38,7 @@ var game = {
             unlocked: 1250,
             name: "Farm",
             flavor: "Plant beans, to grow, MORE BEANS",
-            img: "/images/buildings/bean-farm.png"
+            img: "images/buildings/bean-farm.png"
         },
         beanDrill: {
             amount: 0,
@@ -48,7 +48,7 @@ var game = {
             unlocked: 150000,
             name: "Drill",
             flavor: "Drills into the ground to find deposits of beans",
-            img: "/images/buildings/bean-drill.png"
+            img: "images/buildings/bean-drill.png"
         },
         beanFactory: {
             amount: 0,
@@ -58,7 +58,7 @@ var game = {
             unlocked: 4500000,
             name: "Factory",
             flavor: "Packages beans to send all around the world",
-            img: "/images/buildings/bean-factory.png"
+            img: "images/buildings/bean-factory.png"
         },
         beanTreasury: {
             amount: 0,
@@ -68,7 +68,7 @@ var game = {
             unlocked: 25000000,
             name: "Treasury",
             flavor: "Keeps beans safe and accepts<br>them as legal tender",
-            img: "/images/buildings/bean-treasury.png"
+            img: "images/buildings/bean-treasury.png"
         },
         beanTemple: {
             amount: 0,
@@ -78,7 +78,7 @@ var game = {
             unlocked: 1300000000,
             name: "Temple",
             flavor: "A place to pray to the great bean can in the sky",
-            img: "/images/buildings/bean-temple.png"
+            img: "images/buildings/bean-temple.png"
         },
         beanLaboratory: {
             amount: 0,
@@ -88,7 +88,7 @@ var game = {
             unlocked: 25000000000,
             name: "Laboratory",
             flavor: "Synthesising beans is a great step for humanity",
-            img: "/images/buildings/bean-lab.png"
+            img: "images/buildings/bean-lab.png"
         },
         beanRocket: {
             amount: 0,
@@ -98,7 +98,7 @@ var game = {
             unlocked: 400000000000,
             name: "Rocket",
             flavor: "The final frontier doesn't seem so final now",
-            img: "/images/buildings/bean-rocket.png"
+            img: "images/buildings/bean-rocket.png"
         },
         beanMagician: {
             amount: 0,
@@ -108,7 +108,7 @@ var game = {
             unlocked: 900000000000,
             name: "Magician",
             flavor: "Creating beans with MAGIC",
-            img: "/images/buildings/magician.png"
+            img: "images/buildings/magician.png"
         },
         quantumBeans: {
             amount: 0,
@@ -118,7 +118,7 @@ var game = {
             unlocked: 1500000000000,
             name: "Quantum Beans",
             flavor: "How can a bean be a bean and a lentil? Oh wait, nevermind",
-            img: "/images/buildings/quantum-bean.png"
+            img: "images/buildings/quantum-bean.png"
         },
         darkMatterEnhancer: {
             amount: 0,
@@ -128,7 +128,7 @@ var game = {
             unlocked: 600000000000000,
             name: "Dark Matter Enhancer",
             flavor: "'Creating beans from invisible energy since 1997™'",
-            img: "/images/buildings/dark-matter-enhancer.png"
+            img: "images/buildings/dark-matter-enhancer.png"
         },
         lightRefractor: {
             amount: 0,
@@ -138,7 +138,7 @@ var game = {
             unlocked: 1000000000000000,
             name: "Light Refractor",
             flavor: "Creating beans from pure light",
-            img: "/images/buildings/light-refractor.png"
+            img: "images/buildings/light-refractor.png"
         },
         beanRecycler: {
             amount: 0,
@@ -148,7 +148,7 @@ var game = {
             unlocked: 10000000000000000,
             name: "Recycler",
             flavor: "Recycles organic and non-organic matter into beans",
-            img: "/images/buildings/recycler.png"
+            img: "images/buildings/recycler.png"
         },
         gameDeveloper: {
             amount: 0,
@@ -158,7 +158,7 @@ var game = {
             unlocked: 420000000000000000,
             name: "Game Dev",
             flavor: "Creates games to make more beans",
-            img: "/images/buildings/game-dev.png"
+            img: "images/buildings/game-dev.png"
         },
         mulitversalCore: {
             amount: 0,
@@ -168,32 +168,32 @@ var game = {
             unlocked: 1000000000000000000,
             name: "Multiversal Core",
             flavor: "Takes beans from other multiverses",
-            img: "/images/buildings/multiversal-core.png"
+            img: "images/buildings/multiversal-core.png"
         }
     },
-    acheives: [{ req: "game.beans>0", gotten: false, text: "You have one BEAN", img: "/images/acheivements/bean-acheive-64x.png" }, { req: "game.beans>9", gotten: false, text: "You have ten BEANS", img: "/images/acheivements/10-beans-acheive-64x.png" }, { req: "game.beans>68", gotten: false, text: "69 beans- nice", img: "/images/acheivements/681-beans-acheive-64x.png" }, { req: "game.beans>999999&&game.clicks<=10", gotten: false, text: "Neverclick- get 1,000,000 beans<br>and only click 10 times", img: "/images/acheivements/neverclick-acheive-64x.png" }, { req: "game.beans>999999&&game.clicks==0", gotten: false, text: "True Neverclick- get 1,000,000<br>beans without clicking", img: "/images/acheivements/true-neverclick-acheive-64x.png" }]
+    acheives: [{ req: "game.beans>0", gotten: false, text: "You have one BEAN", img: "images/acheivements/bean-acheive-64x.png" }, { req: "game.beans>9", gotten: false, text: "You have ten BEANS", img: "images/acheivements/10-beans-acheive-64x.png" }, { req: "game.beans>68", gotten: false, text: "69 beans- nice", img: "images/acheivements/681-beans-acheive-64x.png" }, { req: "game.beans>999999&&game.clicks<=10", gotten: false, text: "Neverclick- get 1,000,000 beans<br>and only click 10 times", img: "images/acheivements/neverclick-acheive-64x.png" }, { req: "game.beans>999999&&game.clicks==0", gotten: false, text: "True Neverclick- get 1,000,000<br>beans without clicking", img: "images/acheivements/true-neverclick-acheive-64x.png" }]
 };
 
 var delay = 0;
 var bps = 0;
-var sfx_click = new Audio("/audio/click.wav");
+var sfx_click = new Audio("audio/click.wav");
 sfx_click.volume = .5;
 sfx_click.defaultPlaybackRate = 0.5;
-var sfx_beanClick = new Audio("/audio/powerUp.wav");
+var sfx_beanClick = new Audio("audio/powerUp.wav");
 sfx_beanClick.volume = .5;
 sfx_beanClick.defaultPlaybackRate = 0.5;
-var sfx_error = new Audio("/audio/error.wav");
+var sfx_error = new Audio("audio/error.wav");
 sfx_error.volume = .5;
 sfx_error.defaultPlaybackRate = 0.5;
-var sfx_acheiveGet = new Audio("/audio/acheiveGet.wav");
+var sfx_acheiveGet = new Audio("audio/acheiveGet.wav");
 sfx_acheiveGet.volume = .5;
 sfx_acheiveGet.defaultPlaybackRate = 0.5;
-var sfx_wrathbean = new Audio("/audio/wrathbean.wav");
+var sfx_wrathbean = new Audio("audio/wrathbean.wav");
 sfx_wrathbean.volume = .5;
 sfx_wrathbean.defaultPlaybackRate = 0.5;
 
 function beaner() {
-    document.querySelector(".BEAN").src = "/images/beaner.png";
+    document.querySelector(".BEAN").src = "images/beaner.png";
 }
 
 function reset(){
